@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+    <link rel="stylesheet" href="style1.css">
+      <style>
+      * {
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+          Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f7;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding-top: 40px;
+        color: #1d1d1f;
+      }
+
+      #con {
+        background-color: #ffffff;
+        padding: 40px 50px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        width: 90%;
+        max-width: 800px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: 600;
+        color: #1d1d1f;
+      }
+
+      form {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+        justify-content: center;
+      }
+
+      input {
+        padding: 10px 12px;
+        border: 1px solid #ced1d5;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 200px;
+        background-color: #f9f9fa;
+        transition: border 0.3s;
+      }
+
+      input:focus {
+        border-color: #0071e3;
+        outline: none;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #0071e3;
+        color: #ffffff;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #005bb5;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 15px;
+      }
+
+      th,
+      td {
+        padding: 14px;
+        border: 1px solid #e2e2e5;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f1f2f4;
+        color: #1d1d1f;
+        font-weight: 600;
+      }
+
+      td {
+        background-color: #ffffff;
+      }
+
+      td button {
+        padding: 6px 14px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      td button.edit {
+        background-color: #e5e5ea;
+        color: #1d1d1f;
+      }
+
+      td button.edit:hover {
+        background-color: #d1d1d6;
+      }
+
+      td button.delete {
+        background-color: #ff3b30;
+        color: #ffffff;
+      }
+
+      td button.delete:hover {
+        background-color: #d70015;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="con">
+      <h1>Employee Management Portal</h1>
+      <form id="empform">
+  <input id="name" placeholder="Name" />
+  <input id="email" placeholder="Email" />
+  <input id="role" placeholder="Role" />
+  <button id="btn">Add Employee</button>
+</form>
+
+<table >
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody id="tbl"></tbody>
+</table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
